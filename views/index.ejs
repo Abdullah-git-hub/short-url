@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>URL Shortener | Araweb</title>
+        <link
+            rel="shortcut icon"
+            href="https://icons8.com/icon/63807/website"
+            type="image/x-icon"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="../public/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        />
+    </head>
+    <body>
+        <section class="container mt-5">
+            <form id="linkForm">
+                <h3>Ultimate URL Shortener</h3>
+                <div class="inpDiv">
+                    <label for="ytLink">Paste url here:</label>
+                    <input
+                        id="ytLink"
+                        type="url"
+                        required
+                        placeholder="https://acodebyte.blogspot.com/"
+                    />
+                </div>
+                <div class="loadBtn">
+                    <button>Shorten URL</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="container prev_link_con">
+            <div class="card prev_link_card mt-4 mb-5">
+                <!-- <div class="card-header">Previous Links:</div> -->
+                <!-- <div class="card-body">
+                    <blockquote class="blockquote mb-2 p-2" style="border-left: 6px solid #0a58ca">
+                        <p style="color: #0a58ca; font-weight: bold; font-size: 18px !important;">
+                            A well-known quote, contained in a blockquote
+                            element.
+                        </p>
+                        <footer class="blockquote-footer" style="font-size: 15px">
+                            Someone famous in
+                        </footer>
+                    </blockquote>
+                </div> -->
+            </div>
+        </section>
+
+        <script src="../public/main.js"></script>
+    </body>
+</html>
