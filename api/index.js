@@ -25,7 +25,7 @@ const dbURI =
 mongoose
     .connect(dbURI)
     .then(() => {
-        console.log("MongoDB Connected");
+        console.log("MongoDB Connected...");
         app.listen(3000, () => {
             console.log("listening on port 3000...");
         });
