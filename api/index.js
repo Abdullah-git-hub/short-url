@@ -1,14 +1,15 @@
 const express = require("express");
 // const { connectToDB, getDB } = require("./db");
-const { ShortUrl } = require("./db");
-const { makeid } = require("./id");
+const { ShortUrl } = require("../db");
+const { makeid } = require("../id");
 const mongoose = require("mongoose");
 
 const app = express();
 
 // connect mongoDB
-// const dbURI = "mongodb+srv://arafat:120338@node-prac.e5v4exj.mongodb.net/Node-Prac?retryWrites=true&w=majority&appName=node-prac";
-const dbURI = "mongodb://127.0.0.1:27017/short-Url";
+const dbURI =
+    "mongodb+srv://arafat:120338@node-prac.e5v4exj.mongodb.net/Node-Prac?retryWrites=true&w=majority&appName=node-prac";
+// const dbURI = "mongodb://127.0.0.1:27017/short-Url";
 
 // connectToDB(dbURI, (err) => {
 //     if (!err) {

@@ -15,7 +15,7 @@ const urlSchema = new mongoose.Schema(
     { timestamps: true }
 );
 
-const ShortUrl = mongoose.model("veryshortUrl", urlSchema);
+const ShortUrl = mongoose.model("url", urlSchema);
 
 module.exports = { ShortUrl };
 
