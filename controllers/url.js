@@ -1,10 +1,14 @@
 const { ShortUrl } = require("../models/url");
-const { makeid } = require("../modules/id");
+const { makeid } = require("../services/id");
 
 function showIndexHtmlPage(req, res) {
     // res.sendFile("./views/index.html", { root: __dirname });
     // ShortUrl.find().then((docs) => console.log(docs));
-    res.render("index");
+    res.render("index", {
+        title: "URL | Araweb",
+        cssPath: "../public/style.css",
+        jsPath: "../public/main.js",
+    });
 }
 
 function postLongUrl(req, res) {
@@ -42,7 +46,8 @@ function getRedirectedUrl(req, res) {
         })
         .catch((err) => {
             console.log(err);
-            res.status(404).send("Page Not Found");
+            res.redirect("/");
+            // res.status(404).send("Page Not Found");
         });
 }
 
