@@ -1,7 +1,7 @@
 const express = require("express");
 // const { connectToDB, getDB } = require("./db");
-const { ShortUrl } = require("../db");
-const { makeid } = require("../id");
+const { ShortUrl } = require("./db");
+const { makeid } = require("./id");
 const mongoose = require("mongoose");
 
 const app = express();
