@@ -1,5 +1,6 @@
 const { v4: uuidv4 } = require("uuid");
 const User = require("../models/user");
+const { setUser } = require("../services/auth");
 
 function getCreatUser(req, res) {
     res.render("signup", {
@@ -41,8 +42,12 @@ function logInUser(req, res) {
         email,
         password,
     })
-        .then((result) => {
-            if (result) {
+        .then((user) => {
+            if (user) {
+                const sessionID = uuidv4();
+                console.log(sessionID, user);
+                setUser(sessionID, user);
+                res.cookie("uid", sessionID);
                 res.redirect("/");
             } else {
                 res.render("login", {

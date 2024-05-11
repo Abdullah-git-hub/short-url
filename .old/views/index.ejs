@@ -36,6 +36,14 @@
                 </div> -->
             </div>
         </section>
+        <script>
+            function getAllKeys() {
+                const keys = fetch("/url/<%= userId %>", { method: "GET" })
+                    .then((respose) => respose.json())
+                    .then((doc) => doc);
+                return keys;
+            }
+        </script>
         <%- include('./partials/footer.ejs') %>
     </body>
 </html>
